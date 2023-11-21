@@ -1,0 +1,574 @@
+body{
+    margin: auto;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    overflow-x: hidden;
+    width: 100%;
+    transition: background 0.2s linear;
+}
+input[type="checkbox"]{
+    display: none;
+}
+.bi{
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+.bi-moon{
+    display: none;
+}
+/*Dark theme*/
+.dark,
+.dark header,
+.dark .modal-body,
+.dark .modal-header,
+.dark #modal{
+    background-color: #263238;
+    color: #FFF;
+}
+.dark,
+.dark header,
+.dark .modal-bodyf,
+.dark .modal-headerf,
+.dark #modalf{
+    background-color: #263238;
+    color: #FFF;
+}
+
+.dark,
+.dark header,
+.dark .modal-bodyp,
+.dark .modal-headerp,
+.dark #modalp{
+    background-color: #263238;
+    color: #FFF;
+}
+
+.dark .bi-sun{
+    display: none;
+}
+.dark .bi-moon{
+    display: block;
+}
+/*Dark theme*/
+/*Parte do Modal*/
+button{
+    padding: .6rem 1.2rem;
+    background-color: #888;
+    color: #FFF;
+    border: none;
+    border-radius: .25rem;
+    cursor: pointer;
+    opacity: 0.7;
+    font-size: 1rem;
+    transition: .4s;
+}
+button:hover{
+    opacity: 1;
+}
+#fade,#modal{
+    transition: .5s;
+    opacity: 1;
+    pointer-events: all;
+}
+
+#fade{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 5;
+}
+#modal{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    background-color: white;
+    max-width: 90%;
+    padding: 1.2rem;
+    border-radius: .5rem;
+}
+.modal-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #CCC;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+}
+.modal-body p{
+    margin-bottom: 1rem;
+}
+#modal.hide,
+#fade.hide{
+    opacity: 0;
+    pointer-events: none;
+}
+#modal.hide{
+    top: 0;
+}
+/*Modal florianópolis*/
+#fadef,#modalf{
+    transition: .5s;
+    opacity: 1;
+    pointer-events: all;
+}
+
+#fadef{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 5;
+}
+#modalf{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    background-color: white;
+    max-width: 90%;
+    padding: 1.2rem;
+    border-radius: .5rem;
+}
+.modal-headerf{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #CCC;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+}
+.modal-bodyf p{
+    margin-bottom: 1rem;
+}
+#modalf.hidef,
+#fadef.hidef{
+    opacity: 0;
+    pointer-events: none;
+}
+#modalf.hidef{
+    top: 0;
+}
+
+/*Modal Florianópolis*/
+
+/*Modal Porto de Galinhas*/
+#fadep,#modalp{
+    transition: .5s;
+    opacity: 1;
+    pointer-events: all;
+}
+
+#fadep{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 5;
+}
+#modalp{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    background-color: white;
+    max-width: 90%;
+    padding: 1.2rem;
+    border-radius: .5rem;
+}
+.modal-headerp{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #CCC;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+}
+.modal-bodyp p{
+    margin-bottom: 1rem;
+}
+#modalp.hidep,
+#fadep.hidep{
+    opacity: 0;
+    pointer-events: none;
+}
+#modalp.hidep{
+    top: 0;
+}
+/*Modal Porto de Galinhas*/
+/*Parte do modal*/
+
+
+li.header-list{
+    display: inline-block;
+    margin:  20px;
+    font-size: larger;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #24849b;
+    height: auto;
+    
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column; /* Volta para column para telas menores */
+        text-align: center; /* Alinha o texto ao centro para telas menores, se necessário */
+    }
+}
+
+
+#title{
+    line-height: 20px;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+a.header-link{
+    text-decoration: none;
+    color: #d5cebf;
+}
+
+a.header-link:hover{
+    color: #ff9807;
+    transition: all 0.6s;
+}
+
+img.logo{
+    height: 120px;
+    margin-left: 10px;
+    width: auto;
+    border-radius: 50%;
+    border: 2px solid #d5cebf;
+}
+
+main{
+    height: auto;
+    
+}
+
+#banner .foto{
+    height: 500px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    min-width: 50%;
+    object-fit: cover;
+    transition: all 1s;
+}
+
+@media screen and (min-width: 768px){
+    header {
+      flex-direction: row;
+    }}
+
+#title{
+    text-align: start;
+}    
+
+:root{
+    --color-neutral-0: #0c0c0c;
+    --color-neutral-10: #171717;
+    --color-neutral-30: #a8a29e;
+    --color-neutral-40: #f5f5f5;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap');
+* {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+}
+
+footer{
+    width: 100%;
+    color: var(--color-neutral-40);
+}
+
+.footer-link{
+    text-decoration: none;
+}
+
+#footer-content{
+    background-color: var(--color-neutral-10);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 3rem 3.5rem;
+}
+
+#footer-contacts h1{
+    margin-bottom: 0.75rem;
+}
+
+#footer-social-media{
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+#footer-social-media .footer-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+    width: 2.5rem;
+    color: var(--color-neutral-40);
+    border-radius: 50%;
+    transition: all 0.4s;
+}
+
+#footer-social-media .footer-link i{
+    font-size: 1.25rem;
+}
+
+#footer-social-media .footer-link:hover{
+    opacity: 0.8;
+}
+
+#instagram{
+    background: linear-gradient(#7f37c9, #ff2992, #ff9807)
+}
+
+#facebook{
+    background-color: #4267b3;
+}
+
+#whatsapp{
+    background-color: #25d366;
+}
+
+.footer-list{
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    list-style: none;
+}
+
+.footer-list .footer-link{
+    color: var(--color-neutral-30);
+    transition: all 0.4s;
+}
+
+.footer-list .footer-link:hover{
+    color: #7f37c9;
+}
+
+p.footer-paragraph{
+    color: var(--color-neutral-30) ;
+}
+
+#footer-subscribe{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#footer-subscribe p{
+    color: var(--color-neutral-30);
+}
+
+#input-group{
+    display: flex;
+    align-items: center;
+    background-color: var(--color-neutral-0);
+    border-radius: 4px;
+}
+
+#input-group input{
+    all: unset;
+    padding: 0.75rem;
+    width: 100%;
+}
+
+#input-group button{
+    background-color: #7f37c9;
+    border: none;
+    color: var(--color-neutral-40);
+    padding: 0px 1.25rem;
+    font-size: 1.25rem;
+    height: 100%;
+    border-radius: 0px 4px 4px 0px;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+#input-group button:hover{
+    opacity: 0.8;
+}
+
+#footer-copyright{
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-neutral-0);
+    font-size: 0.9rem;
+    padding: 1.5rem;
+    font-weight: 100 
+}
+
+#footer-logo{
+    width: 50%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    margin-left: 25px;
+}
+
+@media screen and (max-width: 768px) {
+    #footer-content{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    #footer-content{
+        grid-template-columns: repeat(1, 1fr);
+        padding: 3rem 2rem;
+    }
+}
+
+section{
+    width: auto;
+    height: 20%;
+}
+
+.product {
+    
+    margin: 20px auto;
+    padding: 20px;
+    border: 2px solid #729a9a;
+    border-radius: 10%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s; /* Adiciona uma transição suave de 0.3 segundos para a propriedade transform */
+    cursor: pointer;
+}
+
+.product img:hover {
+    transform: scale(1.11); /* Aumenta a escala da imagem em 10% */
+}
+
+.price {
+    font-size: 1.5em;
+    color: black;
+    margin-top: 2px;
+    margin-bottom: 20px;
+}
+
+h2{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+p .packets{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 20px;
+    
+}
+
+button.buy-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.buy-button:hover {
+    background-color: #45a049;
+}
+
+.products-container {
+    display: flex;
+    justify-content: space-around; 
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 20px auto; 
+}
+
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+#tickets li{
+    border: 5px solid #171717;
+    margin: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial', sans-serif;
+}
+
+#tickets li.gol{
+    background: linear-gradient(orange, #FAAC58);
+}
+
+#tickets li.azul{
+    background: linear-gradient(blue, lightblue ) ;
+}
+
+#tickets ul{
+    font-family: 'Franklin Gothic Medium', 'Arial', sans-serif;
+}
+
+#tickets img{
+    height: 100px;
+    width: auto;
+}
+
+#tickets .price-tickets{
+    background-color: #7f37c9;
+    color: #FFF;
+    margin: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial', sans-serif;
+}
+
+#tickets p{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial', sans-serif;
+    font-size: large;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
